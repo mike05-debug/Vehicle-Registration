@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
 
 /* Body styles */
@@ -81,10 +82,12 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     /* Additional styling for the form */
+    
     width: 600px;
     margin: 20px auto;
     padding: 30px;
     border-radius: 8px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -116,5 +119,5 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #ff0080;
 }
