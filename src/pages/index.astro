@@ -1,16 +1,40 @@
 ---
-
+import Layout from "../components/layout.astro"
+const Title = ""
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div class="container">
+		<img id="bg-img" src="/public/bg.png" alt="Background Image">
+		<form class="form">
+			<!-- Your form elements here -->
+		</form>
+	</div>
+	
+	<form class="reg-form">
+		<div>
+		  <label for="type">Vehicle Type:</label>
+		  <select id="type" name="type" required>
+			<option value="tricycle">Tricycle</option>
+			<option value="motorcycle">Motorcycle</option>
+		  </select>
+		</div>
+
+		<div>
+		  <label for="owner_name">Owner Name:</label>
+		  <input type="text" id="owner_name" name="owner_name" required />
+		</div>
+
+		<div>
+		  <label for="vehicle_model">Vehicle Model:</label>
+		  <input type="text" id="vehicle_model" name="vehicle_model" required />
+		</div>
+
+		<div>
+		  <label for="registration_number">Registration Number:</label>
+		  <input type="text" id="registration_number" name="registration_number" required />
+		</div>
+		
+		<button type="submit">Register Vehicle</button>
+	</form>
+</Layout>
