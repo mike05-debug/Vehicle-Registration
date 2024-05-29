@@ -22,7 +22,7 @@ body {
 header {
     background-color: var(--base-color);
     color: #fff;
-    padding: 1rem;
+    padding: 0.2rem;
     text-align: center;
 }
 
@@ -39,7 +39,8 @@ header {
 .nav-link {
     list-style-type: none;
     display: inline-block;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    padding: 2rem;
     font-weight: bold;
 }
 
@@ -53,14 +54,13 @@ header {
 }
 
 .bg {
-    background-image: url("/public/bg.png");
+    background-image: url("/bg.png");
     background-color: #2f0707;
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
     height: 100vh;
 }
-
 
 
 /* Form styles */
@@ -120,4 +120,40 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #ff0080;
+}
+
+@media (max-width: 620px) {
+    header {
+        padding: 0.1rem;
+    }
+
+    .reg-form {
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .reg-form {
+        width: 400px;
+    }
+}
+
+@media (max-width: 430px) {
+    .bg {
+
+    }
+
+    .reg-form {
+        width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 50px;
+    }
+
+    .reg-form {
+        width: 300px;
+    }
 }
