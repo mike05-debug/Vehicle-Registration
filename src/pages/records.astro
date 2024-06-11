@@ -1,0 +1,22 @@
+---
+import Layout from "../components/layout.astro"
+import { query } from "../scripts/database.js"
+
+let data;
+
+try {
+  data = await query('SELECT name FROM users');
+} catch (error) {
+  console.error(error);
+  data = [];
+}
+---
+
+<Layout>
+    <h1>List of Records</h1><br>
+	<ul>
+		{data.map(name => (
+		  <li>{name.name}</li>
+		))}
+	</ul>
+</Layout>
