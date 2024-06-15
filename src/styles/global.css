@@ -5,7 +5,8 @@
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     
-    --base-color: #cc0066
+    --base-color: #cc0066;
+    --base-color-deep: #b31552;
 }
 
 /* Body styles */
@@ -48,15 +49,33 @@ header {
 }
 
 .nav-link:hover a {
-    color: #000000;
+    color: #590022;
 }
 
 .bg {
     background-image: url("/bg.png");
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-size: cover;
     background-attachment: fixed;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--base-color-deep);
+    color: #fff;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.footer-link {
+    padding: 1rem;
+}
+
+.dev-link {
+    /* text-decoration: none; */
+    color: white;
 }
 
 /* Form styles */
@@ -66,21 +85,26 @@ header {
     padding: 20px;
 }
 
-.reg-form {
-    /* Form Overlay */
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.form-title {
+    text-align: center;
+    color: white;
+    background: var(--base-color-deep);
+    padding: 1rem;
+}
 
-    /* Additional styling */
+.statement {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.reg-form {
+    color: white;
     width: 100%; /* Full width for mobile */
-    max-width: 600px; /* Maximum width for larger screens */
+    max-width: 700px; /* Maximum width for larger screens */
     margin: 20px auto;
     padding: 30px;
     border-radius: 8px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #b31552d2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -93,13 +117,18 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
+input[type="text"], input[type="date"],
 select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.checklist {
+    font-size: 18px;
+}
+
 
 button[type="submit"] {
     background-color: var(--base-color);
@@ -119,6 +148,10 @@ button[type="submit"]:hover {
 
 /* Tablet styles */
 @media (min-width: 600px) {
+    .bg {
+        height: 250vh;
+    }
+
     .nav-tab {
         flex-direction: row; /* Row direction for tablets */
         justify-content: space-between;
@@ -143,5 +176,11 @@ button[type="submit"]:hover {
 
     .nav-tab ul {
         flex-direction: row; /* Row direction for desktops */
+    }
+}
+
+@media (min-width: 300px) {
+    .bg {
+        height: 180vh;
     }
 }

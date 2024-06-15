@@ -1,11 +1,12 @@
 ---
 import Layout from "../components/layout.astro"
+import  "../styles/records.css"
 import { query } from "../scripts/database.js"
 
 let data;
 
 try {
-  data = await query('SELECT name FROM users');
+  data = await query('SELECT name, email FROM users');
 } catch (error) {
   console.error(error);
   data = [];
@@ -13,10 +14,11 @@ try {
 ---
 
 <Layout>
-    <h1>List of Records</h1><br>
+  <h1 class="form-title">Records List</h1>
 	<ul>
-		{data.map(name => (
-		  <li>{name.name}</li>
+		{data.map(_data => (
+		  <li class="record-data"><strong>Fullname:</strong> {_data.name}</li>
+          <li class="record-data"> <strong>Email:</strong> {_data.email}</li>
 		))}
 	</ul>
 </Layout>
