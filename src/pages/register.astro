@@ -1,0 +1,91 @@
+---
+import Layout from "../components/layout.astro";
+---
+
+<Layout>
+    <div class="bg">
+		<h1 class="form-title">Register</h1>
+		<form class="reg-form">
+			<p class="statement">1. I, the undermentioned person which name and identification mark is as follow:</p><br>
+
+			
+			<div>
+			  <label for="name">Name:</label>
+			  <input type="text" id="name" name="name" required/>
+			</div>
+
+			<div>
+				<label for="type">Vehicle Type:</label>
+				<select id="type" name="type" required>
+				  <option value="tricycle">Tricycle</option>
+				  <option value="motorcycle">Motorcycle</option>
+				</select>
+			</div>
+	
+			<div>
+				<label for="res_address">Residential Address:</label>
+				<input type="text" id="res_address" name="res_address" required />
+			</div>
+	
+			<div>
+				<label for="lga">L.G.A:</label>
+				<input type="text" id="lga" name="lga" required />
+			</div>
+	
+			<div>
+				<label for="ward">Ward:</label>
+				<input type="text" id="ward" name="ward" required />
+			</div>
+	
+			<div>
+				<label for="skill_sets">Trade/Skill Sets:</label>
+				<input type="text" id="skill_sets" name="skill_sets" required />
+			</div>
+	
+			<div>
+				<label for="dob">Date of Birth:</label>
+				<input type="date" id="dob" name="dob" required />
+			</div>
+	
+			<div>
+				<label for="pob">Place of Birth:</label>
+				<input type="text" id="pob" name="pob" required />
+			</div>
+	
+			<div>
+				<label for="type">Complexion:</label>
+				<select id="complexion" name="complexion" required>
+				  <option value="very_fair_skin">Very fair skin</option>
+				  <option value="fair_skin">Fair skin</option>
+				  <option value="medium_skin">Medium skin</option>
+				  <option value="olive_skin">Olive skin</option>
+				  <option value="brown_skin">Brown skin</option>
+				  <option value="black_skin">Black skin</option>
+				</select>
+			</div>
+
+			<p class="statement">2. Hereby agree to become a member of this National Commercial Tricycle and Motorcycle Owners and Riders Association</p><br>
+
+			<div>
+				<label for="reg_date">Registration Date:</label>
+				<input type="date" id="reg_date" name="reg_date" required />
+			</div>
+
+			<p class="statement">3. Thereafter I agree with the following rules and regulations of this Association</p><br>
+			
+			<div>
+				<input type="checkbox" name="" id=""> <span class="checklist">I will not ply the road without valid driving license/riders identification card</span>
+			</div>
+
+			<div>
+				<input type="checkbox" name="" id=""> <span class="checklist">I will ensure that the particulars of my tricycle/motorcycle is up to date and valid</span>
+			</div>
+
+			<div>
+				<input type="checkbox" name="" id=""> <span class="checklist">From time to time I promise to obey my my leaders, obtain my daily development/weekly intervention ticket/NACTOMORAS Life assurance policy and contribute my own quota to the association and be of good conduct.</span>
+			</div>
+			
+			<button type="submit">Register Vehicle</button>
+		</form>
+	</div>
+</Layout>
