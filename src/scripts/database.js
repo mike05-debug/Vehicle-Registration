@@ -1,13 +1,20 @@
-import mysql from 'mysql2/promise';
+import pkg from 'pg';
+const { Pool } = pkg;
 
-const pool = mysql.createPool({
+const pool = new Pool({
   host: 'localhost',
-  user: 'root',
-  password: 'm25365',
-  database: 'tricycle_motorcycle_registration'
+  user: 'postgres',
+  password: '25365',
+  database: 'nactomoras_reg',
+  port: 5432, // default PostgreSQL port
 });
 
 export async function query(sql, params) {
-  const [results] = await pool.execute(sql, params);
-  return results;
+  const client = await pool.connect();
+  try {
+    const res = await client.query(sql, params);
+    return res.rows;
+  } finally {
+    client.release();
+  }
 }
